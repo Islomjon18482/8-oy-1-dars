@@ -1,0 +1,34 @@
+#main-btn-container{
+  display: flex;
+  min-height: 150px;
+  border: 1px solid grey;
+  margin: 30px;
+  border-radius: 100px;
+  padding: 10px;
+  transition: 0.25s;
+  overflow: hidden;
+}
+#main-btn-container:hover{
+  border-color: #646cff;
+}
+#record-btn{
+  margin: 20px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 20px 30px;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  transition: background-color 2s;
+}
+#record-btn:hover {
+  background-color: #646cff55;
+  border-color: #646cff;
+}
+.for-video{
+  border-radius: 20px !important;
+}
+#video-running{
+  max-width: 100%;
+  border-radius: 20px;
+}
