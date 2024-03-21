@@ -1,35 +1,14 @@
-import { ReactMediaRecorder } from "react-media-recorder";
-import React, { useState } from 'react';
+import { Body } from './component/body';
+import { Header } from './component/header';
+import { useState } from 'react';
 
-const App = () => {
-  const [recordedVideo, setRecordedVideo] = useState(null);
-
-  const handleRecordingStop = (mediaBlobUrl) => {
-    setRecordedVideo(mediaBlobUrl);
-  };
-
+export default function App() {
+  
   return (
-    <div>
-      <ReactMediaRecorder
-        screen
-        render={({ status, startRecording, stopRecording }) => (
-          <div className="action">
-            <div className="btns">
-              <button onClick={startRecording}>Start Recording</button>
-              <button onClick={stopRecording}>Stop Recording</button>
-            </div>
-            {recordedVideo && (
-              <div>
-                <video src={recordedVideo} controls autoPlay loop />
-                <a href={recordedVideo} download="recorded-video.mp4">Download Recorded Video</a>
-              </div>
-            )}
-          </div>
-        )}
-        onStop={handleRecordingStop} // stopRecording tugmasi bosilgandan so'ng
-      />
-    </div>
-  );
-};
+    <>
+    <Header/>
+    <Body/>
+    </>
+  )
+}
 
-export default App;
